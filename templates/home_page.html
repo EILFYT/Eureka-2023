@@ -1,0 +1,34 @@
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}"/>
+
+<h3 style="font-size:60px;color:white">
+  <center>Medical Price Comparer!</center>
+</h3>
+
+<h4 style="font-size:30px;color:white">
+  <center>Your one stop comparison shop!</center>
+  </h4>
+
+  
+<body, style="font-size:20px; color:white; font:garamond"> <strong>
+    <center>Enter the medical product you are looking for, and we will compare prices of the item in different approved stores to find the
+      best deal for you!</center>
+  </strong> </body> <br>
+  <br>
+
+  <center>
+		<form action="{{ url_for('index') }}" method="post">
+      <!-- Location:
+      <input type="text" name="first_name" value="" maxlength="100"
+        style="margin-left: 2.5em;padding: 0 7em 1em 0;border-width: 2px; border-color: black; border-style:solid;" />
+      <br /> -->
+      <strong>
+      Item:
+      <input type="text" name="input" value="" maxlength="100"
+        style="margin-left: 5.05em;padding: 0 7em 1em 0;border-width: 2px; border-color: black; border-style:solid;" />
+      <div></div>
+      <input type="submit" value="Submit"
+        style="margin-left: 5em;margin-top: 0.5em; border-color: black; font-size:20px" onclick="myfunction()"/>
+      </strong>
+      
+  </center>
+  </form>

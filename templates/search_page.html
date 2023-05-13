@@ -1,0 +1,35 @@
+<h3 style="font-size:50px;color:black"> <u>
+  <center>Results for your search</center>
+</h3>
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style2.css') }}"/>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}
+</style>
+</head>
+<body>
+<ul>
+<!--  -->
+	<table>
+			<tr>
+    		<th>Name</th>
+    		<th>Price</th>
+    		<th>Link to Product</th>
+  		</tr>
+		{% for item in data %}
+  		<tr>
+    		<td>{{item.name}}</td>
+    		<td>{{item.price}}</td>
+				<td><a href="{{item.link}}">Link to Product</a></td>
+  		</tr>
+		{% endfor %}
+	</table>
+</ul>
